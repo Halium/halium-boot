@@ -1,17 +1,17 @@
-# UBports boot
+# Halium-boot
 
-UBports initrd (upstart)
+bootimg generator for Halium ports 
 
 #### Build
 
 ```
-mka ubports-boot
+mka halium-boot
 ```
 
 #### Initrd debugging:
 
 ```
-sudo fastboot boot ubports-boot.img -c break=[level]
+sudo fastboot boot halium-boot.img -c break=[level]
 ```
 
 Levels
@@ -25,7 +25,7 @@ Levels
 example:
 
 ```
-sudo fastboot boot ubports-boot.img -c break=premount
+sudo fastboot boot halium-boot.img -c break=premount
 ```
 
 And use telnet to login:

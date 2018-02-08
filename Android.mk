@@ -112,4 +112,6 @@ endif
 
 .PHONY: halium-common
 
-halium-common: bootimage mkbootimg halium-boot
+halium-boot: mkbootimg
+
+halium-common: bootimage halium-boot

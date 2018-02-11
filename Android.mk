@@ -107,7 +107,7 @@ ifdef BOARD_USE_LOCAL_INITRD
 	@echo "Using local initramfs at device/*/$(TARGET_DEVICE)/initramfs.gz"
 	@cp device/*/$(TARGET_DEVICE)/initramfs.gz $@
 else
-	@$(GET_INITRD) ${TARGET_KERNEL_ARCH} $@
+	@$(GET_INITRD) ${TARGET_ARCH} $@
 endif
 
 .PHONY: halium-common

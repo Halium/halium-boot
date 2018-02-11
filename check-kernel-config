@@ -279,7 +279,7 @@ ewhite() {
 	echo -e "\033[37m" $@
 }
 
-echo -e "\n\nChecking config file for Ubuntu Touch specific config options.\n\n"
+echo -e "\n\nChecking config file for Halium specific config options.\n\n"
 
 errors=0
 fixes=0

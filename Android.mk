@@ -100,6 +100,9 @@ ifeq ($(BOARD_CUSTOM_MKBOOTIMG),pack_intel)
 else
 	@mkbootimg --ramdisk $(HALIUM_BOOT_RAMDISK) $(HALIUM_BOOTIMAGE_ARGS) $(BOARD_MKBOOTIMG_ARGS) --output $@
 endif
+ifdef BOOT_RAMDISK_SEANDROIDENFORCE
+	@echo -n "SEANDROIDENFORCE" >> $@
+endif
 
 $(HALIUM_BOOT_RAMDISK):
 	@echo "Downloading initramfs to : $@"

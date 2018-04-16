@@ -105,6 +105,7 @@ ifdef BOOT_RAMDISK_SEANDROIDENFORCE
 endif
 
 $(HALIUM_BOOT_RAMDISK):
+	@mkdir -p $(dir $@)
 	@echo "Downloading initramfs to : $@"
 ifdef BOARD_USE_LOCAL_INITRD
 	@echo "Using local initramfs at device/*/$(TARGET_DEVICE)/initramfs.gz"

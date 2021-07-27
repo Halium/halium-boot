@@ -325,7 +325,7 @@ for c in $CONFIGS_EQ;do
 		egreen "$c is already set correctly."
 		continue
 	elif grep "^$lhs" "$FILE" >/dev/null;then
-		cur=$(awk -F= '{ print $2 }' <(grep "$lhs" "$FILE"))
+		cur=$(awk -F= '{ print $2 }' <(grep "^$lhs=" "$FILE"))
 		ered "$lhs is set, but to $cur not $rhs."
 		if $write ; then
 			egreen "Setting $c correctly"

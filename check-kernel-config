@@ -344,7 +344,7 @@ for c in $CONFIGS_EQ;do
 		ered "$lhs is set, but to $cur not $rhs."
 		if $write ; then
 			egreen "Setting $c correctly"
-			sed -i 's,^'"$lhs"'.*,# '"$lhs"' was '"$cur"'\n'"$c"',' "$FILE"
+			sed -i 's;^'"$lhs"'.*;# '"$lhs"' was '"$cur"'\n'"$c"';' "$FILE"
 			fixes=$((fixes+1))
 		fi
 	else
